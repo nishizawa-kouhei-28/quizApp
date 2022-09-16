@@ -9,7 +9,7 @@ import SwiftUI
 
 /// クイズ管理用のクラス。
 /// シングルトンで利用する
-class quizmanager4 {
+class quizmanager4 : ObservableObject{
     
     static let shared = quizmanager4()
     

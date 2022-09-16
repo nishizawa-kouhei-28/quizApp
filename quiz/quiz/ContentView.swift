@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-   
+    @ObservedObject var viewModel = QuizManager.shared
+    @ObservedObject var viewModel2 = quizmanager2.shared
+    @ObservedObject var viewModel3 = quizmanager3.shared
+    @ObservedObject var viewModel4 = quizmanager4.shared
     var body: some View {
         
         NavigationView{
             ZStack {
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
+//                Image("background")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
                 
-                LinearGradient(colors: [.purple.opacity(0.5),
-                                        .blue.opacity(0.4),
-                                        .white.opacity((0.8))], startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
+//                LinearGradient(colors: [.pink.opacity(0.5),
+//                                        .pink.opacity(0.4),
+//                                        .white.opacity((0.8))], startPoint: .top, endPoint: .bottom)
+//                    .ignoresSafeArea()
             
             VStack{
         HStack{
-            Button(action:{}){
+            Button(action:{
+                viewModel.quizReset()
+            }){
                 NavigationLink(destination:SwiftUIView()){Text("料理")
                     .font(.title)
                     .foregroundColor(Color.white)
@@ -36,6 +41,7 @@ struct ContentView: View {
             }
             
             Button(action:{
+                viewModel2.quizReset()
             }){
                 NavigationLink(destination:SwiftUIView2()){Text("漢字の読み")
                     .font(.title)
@@ -51,7 +57,7 @@ struct ContentView: View {
         }
         HStack{
             Button(action:{
-                
+                viewModel3.quizReset()
                 
             }){
                 NavigationLink(destination:SwiftUIView3()){Text("数学")
@@ -64,7 +70,9 @@ struct ContentView: View {
             }
            
             
-            Button(action:{}){
+            Button(action:{
+                viewModel4.quizReset()
+            }){
                 NavigationLink(destination:SwiftUIView4()){Text("歴史")
                     .font(.title)
                     .foregroundColor(Color.white)

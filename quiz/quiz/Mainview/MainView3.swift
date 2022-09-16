@@ -12,12 +12,12 @@ struct MainView3: View {
     var background: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                
-                LinearGradient(colors: [.purple.opacity(0.5),
+//                Image("background")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
+//                
+                LinearGradient(colors: [.blue.opacity(0.5),
                                         .blue.opacity(0.4),
                                         .white.opacity((0.8))], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
@@ -37,8 +37,8 @@ struct MainView3: View {
                     
                     VStack {
                         // タイトル
-                        CommonText(text: "雑学4択クイズ!\n\(viewModel3.maxProgress)秒で全部解けるかな？", size: 30)
-                            .padding()
+//                        CommonText(text: "雑学4択クイズ!\n\(viewModel3.maxProgress)秒で全部解けるかな？", size: 30)
+//                            .padding()
                         
                         // 問題
                         CommonText(text: viewModel3.quizData.question, size: 17)

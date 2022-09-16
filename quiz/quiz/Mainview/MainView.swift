@@ -13,14 +13,14 @@ struct MainView: View {
     var background: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
+//                Image("background")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
                 
-                LinearGradient(colors: [.purple.opacity(0.5),
-                                        .blue.opacity(0.4),
-                                        .white.opacity((0.8))], startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: [.green.opacity(0.5),
+                                        .green.opacity(0.4),
+                                        .yellow.opacity((0.8))], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
@@ -38,8 +38,8 @@ struct MainView: View {
                     
                     VStack {
                         // タイトル
-                        CommonText(text: "雑学4択クイズ!\n\(viewModel.maxProgress)秒で全部解けるかな？", size: 30)
-                            .padding()
+//                        CommonText(text: "雑学4択クイズ!\n\(viewModel.maxProgress)秒で全部解けるかな？", size: 30)
+//                            .padding()
                         
                         // 問題
                         CommonText(text: viewModel.quizData.question, size: 17)

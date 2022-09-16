@@ -16,10 +16,10 @@ struct CompleteView: View {
     var body: some View {
         VStack {
             // アイコン表示
-            Image(QuizManager.shared.isQuizWon ? "gameClear" :"gameOver")
-                .resizable()
-                .frame(width: 50, height: 50, alignment: .center)
-                .padding()
+//            Image(QuizManager.shared.isQuizWon ? "gameClear" :"gameOver")
+//                .resizable()
+//                .frame(width: 50, height: 50, alignment: .center)
+//                .padding()
                 
             
             // メッセージ表示
@@ -30,11 +30,11 @@ struct CompleteView: View {
                              size: 30)
                     .padding()
                 
-                CommonText(text: QuizManager.shared.isQuizWon
-                             ? "きみはすごい！"
-                             : "また挑戦してね",
-                             size: 30)
-                    .padding()
+//                CommonText(text: QuizManager.shared.isQuizWon
+//                             ? "きみはすごい！"
+//                             : "また挑戦してね",
+//                             size: 30)
+//                    .padding()
             }
             
             if #available(iOS 15.0, *) {
